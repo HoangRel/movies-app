@@ -1,0 +1,52 @@
+.topList,
+.navList {
+  position: relative;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  padding: 20px;
+  margin: 0;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.genres {
+  color: #fff;
+  margin: 67px auto 0 10px;
+}
+
+.topList img {
+  margin-top: 24px;
+  width: 200px;
+  height: 320px;
+
+  /* dùng min-... khi src không render được thì nó vẫn chiếm đủ không gian để hiển thị alt */
+  min-width: 200px;
+  min-height: 320px;
+}
+
+.navList img {
+  width: 260px;
+  height: 220px;
+
+  min-width: 260px;
+  min-height: 220px;
+}
+
+.topList img,
+.navList img {
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 3px;
+}
+
+.topList img:hover,
+.navList img:hover {
+  transform: scale(1.15);
+}
+
+.reject {
+  height: 220px;
+  text-align: center;
+  justify-items: center;
+}

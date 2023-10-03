@@ -1,0 +1,111 @@
+.searchForm {
+  margin: 160px auto 71px;
+  width: 40vw;
+  /* height: 250px; */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 7px;
+}
+
+.inputForm {
+  border-bottom: 3px solid #25ccf7;
+  padding: 0 16px 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  padding-top: 20px;
+}
+
+.inputForm input {
+  border: none;
+  flex: 1;
+  font-size: 24px;
+}
+
+.inputForm input:focus {
+  outline: none;
+}
+
+.inputForm label {
+  width: 2rem;
+  height: 3rem;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+
+.searchButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 24px;
+}
+
+.searchButton button {
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchButton button:first-child {
+  background-color: transparent;
+}
+
+.searchButton button:last-child {
+  background-color: #25ccf7;
+  color: #fff;
+}
+
+.more {
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.more:hover {
+  opacity: 0.7;
+  color: #00ccff;
+}
+
+/* 
+@media (max-width: 768px) {
+  .searchForm {
+    width: 80vw;
+    height: 200px;
+  }
+} */
+
+.formMore {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.formMore > div {
+  display: flex;
+  gap: 8px;
+  margin: 8px;
+}
+
+.formMore option {
+  text-align: center;
+}
+
+.formMore input {
+  text-align: center;
+
+  height: 40px;
+  width: 100px;
+}
+
+.formMore > :last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

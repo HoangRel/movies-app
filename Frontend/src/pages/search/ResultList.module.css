@@ -1,0 +1,42 @@
+.searchTitle {
+  position: relative;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  padding: 10px;
+  margin: 0;
+  gap: 12px;
+}
+
+.ul {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 12px;
+  list-style: none;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.li img {
+  margin-top: 24px;
+  width: 200px;
+  height: 320px;
+  min-width: 200px;
+  min-height: 320px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 3px;
+}
+
+.li img:hover {
+  transform: scale(1.15);
+}
+
+.mess {
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  margin: 36px;
+  text-align: center;
+}

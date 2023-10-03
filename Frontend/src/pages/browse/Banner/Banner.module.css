@@ -1,0 +1,50 @@
+.nav {
+  position: relative;
+  height: 620px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.movieBanner {
+  position: absolute;
+  color: #fff;
+  width: 400px;
+  bottom: 62px;
+  padding-left: 20px;
+}
+
+.movieBanner h1 {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.movieBanner button {
+  padding: 10px 15px;
+  width: 80px;
+  margin-right: 7px;
+  color: #fff;
+  border: none;
+  background-color: rgba(25, 24, 24, 0.489);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.movieBanner p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.movieBanner button:hover {
+  background-color: #fff;
+  color: rgba(25, 24, 24, 0.489);
+}
+
+.reject {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  font-size: 42px;
+  height: 500px;
+}
