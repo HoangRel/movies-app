@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const moviesRoutes = require('./routers/movie');
+const ticketRoutes = require('./routers/ticket');
 const authenticate = require('./utils/auth');
 const errorController = require('./controllers/error');
 
@@ -17,6 +18,8 @@ app.use(authenticate);
 
 // request
 app.use('/api/movies', moviesRoutes);
+
+app.use('/ticket', ticketRoutes);
 
 // error
 app.use(errorController.get404);

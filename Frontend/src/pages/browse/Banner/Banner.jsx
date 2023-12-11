@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import useAPI from "../../../hooks/useAPI";
+import React, { useEffect } from 'react';
+import useAPI from '../../../hooks/useAPI';
 
-import styles from "./Banner.module.css";
+import styles from './Banner.module.css';
 
 const Banner = () => {
   const { enteredBanner, isLoading, errorBanner, fetchMovies } = useAPI();
 
   useEffect(() => {
-    fetchMovies("fetchNetflixOriginals");
+    fetchMovies('fetchTopRated');
   }, [fetchMovies]);
 
   // xét điều kiện để render hợp lý với dữ liệu trả về từ custom hook

@@ -96,7 +96,7 @@ exports.getGenre = (req, res) => {
 exports.getVideo = (req, res) => {
   const filmId = parseInt(req.query.film_id);
   if (!filmId) {
-    return res.status(400).json({ message: 'Not found film_id parram' });
+    return res.status(400).json({ message: 'Not found film_id param' });
   }
 
   const idVideo = VideoList.all(filmId);

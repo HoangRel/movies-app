@@ -3,11 +3,13 @@ import React, { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 
 import styles from './MovieDetail.module.css';
+import Ticket from '../../ticket/Ticket';
 
 // hiển thị chi tiết bộ phim
 const MovieDetail = props => {
   // false là dùng ảnh, true là dùng video từ youtube
   const [isMedia, setIsMedia] = useState(false);
+  const [isBook, setIsBook] = useState(false);
 
   const [isYoutube, setIsYoutube] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -42,8 +44,6 @@ const MovieDetail = props => {
         // }
 
         const data = await response.json();
-
-        console.log(data);
 
         // nếu không có video nào thì thoát
         if (data.results.length === 0) {
@@ -92,8 +92,15 @@ const MovieDetail = props => {
     },
   };
 
+  const onCloseHandler = () => {
+    setIsBook(false);
+  };
+
   return (
     <section className={styles.section}>
+      {isBook && (
+        <Ticket movieId={props.movieData.id} onClose={onCloseHandler} />
+      )}
       <div>
         <h1>{props.movieData.title}</h1>
         <hr></hr>
@@ -101,6 +108,9 @@ const MovieDetail = props => {
         <h3>Vote: {props.movieData.vote}/10</h3>
         <p>{props.movieData.overview}</p>
       </div>
+      <button type='button' onClick={() => setIsBook(true)}>
+        Book tickets
+      </button>
       <div>
         {isLoading && <p>Loading...</p>}
         {isStart && !isMedia && (

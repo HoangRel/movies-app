@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   margin: auto;
   color: #fff;
   height: 50vh;
@@ -20,6 +21,28 @@
   padding: 36px 0;
   margin-bottom: 36px;
   border-bottom: 2px solid #fff;
+}
+
+.section > button {
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px 4px rgb(255, 255, 255);
+  left: 50%;
+  top: 6px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 65%;
+}
+
+.section > button:hover {
+  opacity: 100%;
 }
 
 .section:first-child h3 {
